@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="ice-cream-order-form" action="#" method="get"></form>
+
+    <h1>Ice cream order form</h1>
+
+    <fieldset>
+        <legend>Personal Information</legend>
+            <label for="name">First Name:</label><br>
+            <input type="text" id="fname" name="fname">
+            <br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email">
+    </fieldset>
+
+    <fieldset>
+        <legend> Order Details</legend>
+        <select id ="icecreamflavor" name="Flavor">
+            <option value="vanillaflavor"> Vanilla</option>
+            <option value="chocolateflavor"> Chocolate</option>
+            <option value="oreoflavor"> Oreo</option>
+            <option value="mintflavor"> Mint</option>
+        </select>
+
+        <legend> Choose your cone</legend>
+        <label for ="waffleCone" >
+            <input type ="radio" id ="waffle" name = "method" value = "waffle"> waffleCone
+            </label>   
+            <label for ="sugarCone" >
+            <input type ="radio" id ="sugar" name = "method" value = "sugar"> SugarCone
+            </label>
+            <label for ="cup" >
+            <input type ="radio" id ="cup" name = "method" value = "cup"> Cup
+            </label>
+
+            <legend> Toppings</legend>
+        <label for ="sprinkles" >
+            <input type ="checkbox" id ="sprinkles" name = "method" value = "waffle"> sprinkles
+            </label>   
+            <label for ="nuts" >
+            <input type ="checkbox" id ="nuts" name = "method" value = "sugar"> Nuts
+            </label>
+            <label for ="cherry" >
+            <input type ="checkbox" id ="cherry" name = "method" value = "cup"> cherry
+            </label>
+            <label for ="whippedcream" >
+            <input type ="checkbox" id ="whippedcream" name = "method" value = "cup"> whippedcream
+            </label>
+        </label>
+
+        <br>
+
+        <label for="comment">Additional Comments:</label><br>
+        <textarea cols= "80"rows="5" id="comment" name="comment"></textarea>
+
+    </fieldset>
+
+    <!-- Add an Order button -->
+    <button type="submit" id="order-button">Submit Order</button>
+
+    </body>
+</html>
