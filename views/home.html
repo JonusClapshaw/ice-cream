@@ -5,22 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ice Cream</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="js/icecream.js"></script>
 
     <!-- Favicon -->
     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoKHnXPENvCGbSh39wRXLH3ZS24CSY1w32TA&s">
 </head>
 <body>
-    <form id="ice-cream-order-form" action="#" method="put">
+    <form id="ice-cream" action="#" method="put">
         <h1>Ice cream order form</h1>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoKHnXPENvCGbSh39wRXLH3ZS24CSY1w32TA&s" alt="Ice Cream">
 
         <fieldset>
             <legend>Personal Information</legend>
-                <label for="name">First Name:</label><br>
+                <label for="fname">First Name:</label><br>
                 <input type="text" id="fname" name="fname">
+                <span id = "err-fname" class = "error"> Name cannot be blank </span>
+                <br>
+                <label for="lname">Last Name:</label><br>
+                <input type="text" id="lname" name="lname">
+                <span id = "err-lname" class = "error"> Name cannot be blank </span>
                 <br>
                 <label for="email">Email:</label><br>
                 <input type="text" id="email" name="email">
+                <span id = "err-email" class = "error"> Email cannot be blank </span>
         </fieldset>
 
         <fieldset>
@@ -31,6 +38,7 @@
                 <option value="oreoflavor"> Oreo</option>
                 <option value="mintflavor"> Mint</option>
             </select>
+            <span id = "err-flavor" class = "error"> Email cannot be blank </span>
 
             <legend> Choose your cone</legend>
             <label for ="waffleCone" >
@@ -42,6 +50,7 @@
                 <label for ="cup" >
                 <input type ="radio" id ="cup" name = "method" value = "cup"> Cup
                 </label>
+                <span id = "err-cone" class = "error"> Email cannot be blank </span>
 
                 <legend> Toppings</legend>
             <label for ="sprinkles" >
@@ -57,7 +66,6 @@
                 <input type ="checkbox" id ="whippedcream" name = "method" value = "cup"> whippedcream
                 </label>
             </label>
-
             <br>
 
             <label for="comment">Additional Comments:</label><br>

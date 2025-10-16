@@ -50,5 +50,9 @@ img {
     width: 20%;
 }
 
+.error {
+    color :red;
+    display: none;
+}
 
 
