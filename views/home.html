@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ice Cream</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="js/icecream.js"></script>
+    <script src="js/icecream.js" defer></script>
 
     <!-- Favicon -->
     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoKHnXPENvCGbSh39wRXLH3ZS24CSY1w32TA&s">
@@ -19,11 +19,11 @@
             <legend>Personal Information</legend>
                 <label for="fname">First Name:</label><br>
                 <input type="text" id="fname" name="fname">
-                <span id = "err-fname" class = "error"> Name cannot be blank </span>
+                <span id = "err-fname" class = "error"> First Name cannot be blank </span>
                 <br>
                 <label for="lname">Last Name:</label><br>
                 <input type="text" id="lname" name="lname">
-                <span id = "err-lname" class = "error"> Name cannot be blank </span>
+                <span id = "err-lname" class = "error"> Last Name cannot be blank </span>
                 <br>
                 <label for="email">Email:</label><br>
                 <input type="text" id="email" name="email">
@@ -32,13 +32,14 @@
 
         <fieldset>
             <legend> Order Details</legend>
-            <select id ="icecreamflavor" name="Flavor">
+            <select id ="flavor" name="flavor">
+                <option value="none">Select a flavor</option>
                 <option value="vanillaflavor"> Vanilla</option>
                 <option value="chocolateflavor"> Chocolate</option>
                 <option value="oreoflavor"> Oreo</option>
                 <option value="mintflavor"> Mint</option>
             </select>
-            <span id = "err-flavor" class = "error"> Email cannot be blank </span>
+            <span id = "err-flavor" class = "error"> Flavor cannot be blank </span>
 
             <legend> Choose your cone</legend>
             <label for ="waffleCone" >
@@ -50,7 +51,7 @@
                 <label for ="cup" >
                 <input type ="radio" id ="cup" name = "method" value = "cup"> Cup
                 </label>
-                <span id = "err-cone" class = "error"> Email cannot be blank </span>
+                <span id = "err-method" class = "error"> Cone cannot be blank </span>
 
                 <legend> Toppings</legend>
             <label for ="sprinkles" >

@@ -1,4 +1,4 @@
-document.getElementById('ice-cream').onsubmit = () => {
+document.getElementById("ice-cream").onsubmit = () => {
 
     clearErrors();
 
@@ -6,7 +6,7 @@ document.getElementById('ice-cream').onsubmit = () => {
     let fname = document.getElementById('fname').value.trim();
     let lname = document.getElementById('lname').value.trim();
     let email = document.getElementById('email').value.trim();
-    let size = document.getElementById('size').value;
+    let flavor = document.getElementById('flavor').value;
     let isValid = true;
     if(fname === "") {
         document.getElementById("err-fname").style.display = "block";
@@ -23,7 +23,7 @@ document.getElementById('ice-cream').onsubmit = () => {
         isValid = false;
     }
 
-    // validate methos
+    // validate cones
     let methodButton = document.getElementsByName("method");
     let count = 0;
     for(let i = 0; i < methodButton.length; i++)
@@ -37,8 +37,8 @@ document.getElementById('ice-cream').onsubmit = () => {
         isValid = false;
     }
 
-    if(size ==="none") {
-        document.getElementById("err-size").style.display = "block";
+    if(flavor === "none") {
+        document.getElementById("err-flavor").style.display = "block";
         isValid = false;
     }
 
