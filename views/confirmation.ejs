@@ -11,20 +11,18 @@
     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoKHnXPENvCGbSh39wRXLH3ZS24CSY1w32TA&s">
 </head>
 <body>
-    <form id="ice-cream" action="#" method="put">
-        <fieldset>
-            <h1>Thank you for your order</h1>
-            <p>your ice cream has been confirmed</p>
-
-            <h3>personal information</h3>
-            <p><%= %></p>
-            <p><%= %></p>
-            <p><%= %></p>
-            <p><%= %></p>
-            <p><%= %></p>
-            <p><%= %></p>
-        </fieldset>
-        
-
-    </body>
+    <main>
+        <header>
+            <h1>Order Confirmation</h1>
+        </header>
+        <h1>Thank you for your order, <%= order.fname %></h1>
+        <h2>Order Summary</h2>
+        <p>Name: <%= order.fname%>, <%= order.lname%></p>
+        <p>Email:<%= order.email%></p>
+        <p>flavor: <%= order.flavor%></p>
+        <p>Cone: <%= order.method%></p>
+        <p>toppings: <%= order.toppings%></p>
+        <p>Comment:<%= order.comment%></p>
+    <main>
+</body>
 </html>
