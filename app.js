@@ -50,5 +50,5 @@ app.post('/submit-order', (req, res) => {
 
 //Start the server and listen on the specified port
 app.listen(PORT, () => {
-    console.log(`Server is running at http:localhost:${PORT}`);
+    console.log(`Server is running at http://localhost:${PORT}`);
 });
