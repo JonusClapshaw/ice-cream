@@ -9,7 +9,7 @@ app.use(express.static('public'));
 
 const orders = [];
 //Define the port number where our server will listen 
-const PORT = 3001;
+const PORT = 3009;
 
 dotenv.config();
 
