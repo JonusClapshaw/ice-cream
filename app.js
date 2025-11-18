@@ -44,24 +44,6 @@ app.get('/admin', (req, res) => {
     res.render('admin', { orders });
 });
 
-app.post('/submit-order', (req, res) => {
-    const order = {
-        fname: req.body.fname,
-        lname: req.body.lname,
-        email: req.body.email,
-        flavor: req.body.flavor,
-        method: req.body.method,
-        toppings: req.body.toppings,
-        comment: req.body.comment
-    }
-
-    orders.push(order);
-    console.log(orders);
-
-    res.render('confirmation', {order});
-
-});
-
 app.get('/db-test', async(req, res) => {
 
 
