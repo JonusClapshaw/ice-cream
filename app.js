@@ -114,17 +114,16 @@ app.post('/submit-order', async(req, res) => {
         // The ? are PLACEHOLDERS that will be replaced with actual values
         // This prevents SQL injection (a common security vulnerability)
 
-        const sql = `INSERT INTO orders 
-                     (customer, email, flavor, cone, toppings) 
-                     VALUES (?, ?, ?, ?, ?)`;
+        const sql = `INSERT INTO orders (customer, email, flavor, cone, toppings, timestamp) VALUES (?, ?, ?, ?, ?, ?)`;
 
         // Create an array of parameters for each ? placeholder in order
         const params = [
-            order.customer,
+            order.fname + order.lname,
             order.email,
             order.flavor,
-            order.cone,
-            order.toppings
+            order.method,
+            order.toppings,
+            order.timestamp
         ];
 
         // Execute the query with the parameters
