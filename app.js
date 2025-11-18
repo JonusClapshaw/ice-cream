@@ -40,10 +40,6 @@ app.get('/confirm', (req, res) => {
     res.render('confirmation');
 });
 
-app.get('/admin', (req, res) => {
-    res.render('admin', { orders });
-});
-
 app.get('/db-test', async(req, res) => {
 
 
